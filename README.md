@@ -13,7 +13,7 @@ $ git clone --recursive-submodules https://github.com/KapiteinKrapBijKas/defende
 ```
 
 ## Start kustainer
-You can use docker compose to start a persistent Kustainer instances. The persistent data will be mapped to the *kustodata* directory in the root of this project:
+You can use docker compose to start a persistent Kustainer instance. The persistent data will be mapped to the *kustodata* directory in the root of this project:
 
 ```bash
 $ docker compose up -d
