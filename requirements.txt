@@ -1,0 +1,3 @@
+azure-kusto-data==4.2.0
+termcolor==2.3.0
+loguru==0.7.2

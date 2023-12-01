@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  kustainer:
+    image: mcr.microsoft.com/azuredataexplorer/kustainer-linux:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - "./kustodata:/kustodata"
+    environment:
+      - ACCEPT_EULA=Y
