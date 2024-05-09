@@ -7,11 +7,7 @@ from termcolor import colored
 from loguru import logger
 
 DATABASE: str = "AdvancedHunting"
-
-DOCS_LOCATION: str = "microsoft-365-docs"
-ADVANCED_HUNTING_SCHEMA_FILES_LOCATION: str = (
-    f"{DOCS_LOCATION}/microsoft-365/security/defender"
-)
+DOCS_LOCATION: str = "defender-docs/defender-xdr"
 
 ADVANCED_HUNTING_SCHEMAS = [
     "AADSignInEventsBeta",
@@ -154,7 +150,7 @@ class CreateTableQuery(BaseMgmtQuery):
 
 
 def get_advanced_hunting_schema_file_path(schema: str) -> str:
-    return f"{ADVANCED_HUNTING_SCHEMA_FILES_LOCATION}/advanced-hunting-{schema.lower()}-table.md"
+    return f"{DOCS_LOCATION}/advanced-hunting-{schema.lower()}-table.md"
 
 
 def parse_column(line: str) -> Tuple[str, str]:
