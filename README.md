@@ -4,6 +4,10 @@
 
 Python script that maps Microsoft Defender XDR Schemas to a local Kustainer Data Explorer instance by parsing the open source Microsoft documentation. These schemas will be created as tables in the *AdvancedHunting* database.
 
+## Requirements
+
+- uv
+- docker compose
 
 ## Clone repository
 Clone this repository including submodules:
