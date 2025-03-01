@@ -1,4 +1,3 @@
 /kustodata
-/poc
-/fake-sentinel
-/fake-sentinel-api
+.vscode
+.idea
