@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   kustainer:
     image: mcr.microsoft.com/azuredataexplorer/kustainer-linux:latest
