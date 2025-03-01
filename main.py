@@ -244,11 +244,11 @@ if __name__ == "__main__":
     kcsb = KustoConnectionStringBuilder("http://localhost:8080")
     client = KustoClient(kcsb)
 
-    if not database_exists("AdvancedHunting"):
-        query = """
-            .create database AdvancedHunting persist (
-                @"/kustodata/dbs/AdvancedHunting/md",
-                @"/kustodata/dbs/AdvancedHunting/data"
+    if not database_exists(db=DATABASE):
+        query = f"""
+            .create database {DATABASE} persist (
+                @"/kustodata/dbs/{DATABASE}/md",
+                @"/kustodata/dbs/{DATABASE}/data"
             )
         """
         client.execute_mgmt(database="", query=query)
