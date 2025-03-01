@@ -1,6 +1,7 @@
 services:
   kustainer:
     image: mcr.microsoft.com/azuredataexplorer/kustainer-linux:latest
+    container_name: kustainer
     ports:
       - 8080:8080
     volumes:

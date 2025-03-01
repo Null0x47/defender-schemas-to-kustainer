@@ -19,15 +19,13 @@ You can use docker compose to start a persistent Kustainer instance. The persist
 docker compose up -d
 ```
 
-## Install pip requirements
+## Create venv and install dependencies
 ```bash
-python3 -m venv ./venv
-source ./venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Run script
 
 ```bash
-python3 main.py
+uv run main.py
 ```

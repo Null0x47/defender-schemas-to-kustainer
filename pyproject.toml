@@ -1,0 +1,11 @@
+[project]
+name = "defender-schemas-to-kustainer"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-kusto-data>=4.6.3",
+    "loguru>=0.7.3",
+    "termcolor>=2.5.0",
+]
