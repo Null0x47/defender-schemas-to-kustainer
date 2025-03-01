@@ -1,4 +1,4 @@
-![script output](https://github.com/KapiteinKrapBijKas/defender_schemas_to_kustainer/blob/main/screen.png?raw=true)
+![demo](https://github.com/KapiteinKrapBijKas/defender_schemas_to_kustainer/blob/main/demo.gif)
 
 # Defender XDR schemas to Kustainer
 
@@ -32,4 +32,10 @@ uv sync
 
 ```bash
 uv run main.py
+```
+
+## List Kustainer databases
+
+```bash
+curl -X post -H 'Content-Type: application/json' -d '{"csl":".show databases"}' http://localhost:8080/v1/rest/mgmt | jq
 ```
