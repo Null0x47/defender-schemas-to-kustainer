@@ -1,6 +1,6 @@
 ![script output](https://github.com/KapiteinKrapBijKas/defender_schemas_to_kustainer/blob/main/screen.png?raw=true)
 
-# MS Docs schemas to Kustainer
+# Defender XDR schemas to Kustainer
 
 Python script that maps Microsoft Defender XDR Schemas to a local Kustainer Data Explorer instance by parsing the open source Microsoft documentation. These schemas will be created as tables in the *AdvancedHunting* database.
 
