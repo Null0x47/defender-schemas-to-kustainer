@@ -34,8 +34,14 @@ uv sync
 uv run main.py
 ```
 
-## List Kustainer databases
+## List created tables
 
 ```bash
-curl -X post -H 'Content-Type: application/json' -d '{"csl":".show databases"}' http://localhost:8080/v1/rest/mgmt | jq
+curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":".show tables"}' http://localhost:8080/v1/rest/mgmt | jq
+```
+
+## Query sample data
+
+```bash
+curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":"EmailUrlInfo | take 1"}' http://localhost:8080/v2/rest/query | jq
 ```
