@@ -13,7 +13,7 @@ Python script that maps Microsoft Defender XDR Schemas to a local Kustainer Data
 Clone this repository including submodules:
 
 ```bash
-git clone --recurse-submodules https://github.com/KapiteinKrapBijKas/defender_schemas_to_kustainer
+git clone --recurse-submodules https://github.com/KapiteinKrapBijKas/defender-schemas-to-kustainer
 ```
 
 ## Start kustainer
