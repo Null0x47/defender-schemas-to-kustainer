@@ -9,13 +9,6 @@ Python script that maps Microsoft Defender XDR Schemas to a local Kustainer Data
 - uv
 - docker compose
 
-## Clone repository
-Clone this repository including submodules:
-
-```bash
-git clone --recurse-submodules https://github.com/KapiteinKrapBijKas/defender-schemas-to-kustainer
-```
-
 ## Start kustainer
 You can use docker compose to start a persistent Kustainer instance. The persistent data will be mapped to the *kustodata* directory in the root of this project:
 
