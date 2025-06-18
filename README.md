@@ -44,3 +44,9 @@ curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "
 ```bash
 curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":".clear table EmailUrlInfo data"}' http://localhost:8080/v1/rest/mgmt | jq
 ```
+
+## Create function
+
+```bash
+curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":".create function FN_1() {EmailUrlInfo | take 1}"}' http://localhost:8080/v1/rest/mgmt | jq
+```
