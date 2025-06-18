@@ -1,7 +1,7 @@
 [project]
 name = "defender-schemas-to-kustainer"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python script that maps Microsoft Defender XDR Schemas to a local Kustainer Data Explorer instance"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
