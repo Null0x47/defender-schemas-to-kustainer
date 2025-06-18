@@ -17,6 +17,13 @@ ADVANCED_HUNTING_SCHEMAS = [
     "BehaviorEntities",
     "BehaviorInfo",
     "CloudAppEvents",
+    "CloudAuditEvents",
+    "CloudProcessEvents",
+    "DataSecurityBehaviors",
+    "DataSecurityEvents",
+    "DeviceBaselineComplianceAssessment",
+    "DeviceBaselineComplianceAssessmentKB",
+    "DeviceBaselineComplianceProfiles",
     "DeviceEvents",
     "DeviceFileCertificateInfo",
     "DeviceFileEvents",
@@ -27,6 +34,9 @@ ADVANCED_HUNTING_SCHEMAS = [
     "DeviceNetworkInfo",
     "DeviceProcessEvents",
     "DeviceRegistryEvents",
+    "DeviceTvmBrowserExtensions",
+    "DeviceTvmBrowserExtensionsKB",
+    "DeviceTvmCertificateInfo",
     "DeviceTvmHardwareFirmware",
     "DeviceTvmInfoGathering",
     "DeviceTvmInfoGatheringKB",
@@ -40,6 +50,12 @@ ADVANCED_HUNTING_SCHEMAS = [
     "EmailEvents",
     "EmailPostDeliveryEvents",
     "EmailUrlInfo",
+    "IdentityDirectoryEvents",
+    "IdentityInfo",
+    "IdentityLogonEvents",
+    "IdentityQueryEvents",
+    "ExposureGraphEdges",
+    "ExposureGraphNodes",
     "IdentityDirectoryEvents",
     "IdentityInfo",
     "IdentityLogonEvents",
@@ -87,6 +103,8 @@ def map_to_kql_datatype(datatype: str) -> KQLDataType:
         return KQLDataType.Decimal
     elif datatype == "boolean" or datatype == "bool":
         return KQLDataType.Boolean
+    elif datatype == "enum":
+        return KQLDataType.String
     elif datatype == "list":
         return KQLDataType.Dynamic
 
@@ -160,7 +178,9 @@ def parse_column(line: str) -> Tuple[str, str]:
     if len(key.split(" ")) > 1:
         key = key.split(" ")[0]
 
-    datatype = schema_values[1].strip().replace("`", "").strip()
+    datatype = (
+        schema_values[1].strip().replace("`", "").replace("nullable ", "").strip()
+    )
     return (key, datatype)
 
 
