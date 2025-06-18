@@ -38,3 +38,9 @@ curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "
 ```bash
 curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":"EmailUrlInfo | take 1"}' http://localhost:8080/v2/rest/query | jq
 ```
+
+## Delete sample data
+
+```bash
+curl -X post -H 'Content-Type: application/json' -d '{"db": "AdvancedHunting", "csl":".clear table EmailUrlInfo data"}' http://localhost:8080/v1/rest/mgmt | jq
+```
